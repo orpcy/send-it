@@ -36,4 +36,9 @@ app.post('/parcels', (req, res) => {
 
 });
 
+//get all parcel orders
+app.get('/parcels', (req, res) => {
+  res.status(200).send(parcelData);
+});
+
 export default app;
