@@ -52,4 +52,11 @@ app.get('/parcels/:id', (req, res) => {
   }
 });
 
+//get all parcel orders by a specific user
+app.get('/users/:id/parcels', (req, res) => {
+  const findId = parseInt(req.params.id, 10);
+  const userParcels = parcelData.filter(parcel => parcel.userId === findId);
+  res.status(200).send(userParcels);
+});
+
 export default app;
