@@ -29,7 +29,7 @@ describe('create new parcel order unit test', () => {
       });
   });
   //it should not create if user id does not exist
-  it('should create not create a parcel delivery order if userId not found', (done) => {
+  it('should not create a parcel delivery order if userId not found', (done) => {
     supertest(app)
       .post('/api/v1/parcels')
       .send({
@@ -87,7 +87,7 @@ describe('unit test to get a specific parcel delivery order', () => {
 describe('test to cancel a parcel delivery order', () => {
   it('should cancel a parcel delivery order', done => {
     supertest(app)
-      .patch('/api/v1/parcels/23/cancel')
+      .patch('/api/v1/parcels/2/cancel')
       .end((err, res) => {
         expect(res.status).equal(200);
         expect(res.body.error).equal(undefined);
@@ -98,7 +98,7 @@ describe('test to cancel a parcel delivery order', () => {
 
   it('should not cancel if status is delivered', done => {
     supertest(app)
-      .patch('/api/v1/parcels/5/cancel')
+      .patch('/api/v1/parcels/7/cancel')
       .end((err, res) => {
         expect(res.status).equal(403);
         expect(res.body.error).equal(undefined);
