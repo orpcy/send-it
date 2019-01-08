@@ -22,7 +22,7 @@ app.post('/users', (req, res) => {
     if(err){
       res.send(err);
     }
-    res.send(newUser);
+    res.status(201).send(newUser);
   });
 
 });

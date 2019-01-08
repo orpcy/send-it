@@ -87,7 +87,7 @@ describe('unit test to get a specific parcel delivery order', () => {
 describe('test to cancel a parcel delivery order', () => {
   it('should cancel a parcel delivery order', done => {
     supertest(app)
-      .patch('/api/v1/parcels/23/cancel')
+      .patch('/api/v1/parcels/2/cancel')
       .end((err, res) => {
         expect(res.status).equal(200);
         expect(res.body.error).equal(undefined);
@@ -98,7 +98,7 @@ describe('test to cancel a parcel delivery order', () => {
 
   it('should not cancel if status is delivered', done => {
     supertest(app)
-      .patch('/api/v1/parcels/5/cancel')
+      .patch('/api/v1/parcels/3/cancel')
       .end((err, res) => {
         expect(res.status).equal(403);
         expect(res.body.error).equal(undefined);
