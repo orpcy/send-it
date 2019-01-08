@@ -41,4 +41,15 @@ app.get('/parcels', (req, res) => {
   res.status(200).send(parcelData);
 });
 
+//get a specific parcel order
+app.get('/parcels/:id', (req, res) => {
+  const parcelId = parseInt(req.params.id, 10);
+  const parcelItem = parcelData.find(parcel => parcel.id === parcelId);
+  if (!parcelItem) {
+    res.status(404).send('Parcel order does not exist');
+  } else {
+    res.status(200).send(parcelItem);
+  }
+});
+
 export default app;
