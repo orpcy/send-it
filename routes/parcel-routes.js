@@ -59,4 +59,21 @@ app.get('/users/:id/parcels', (req, res) => {
   res.status(200).send(userParcels);
 });
 
+//cancel a specific order
+app.patch('/parcels/:id/cancel', (req, res) => {
+  const parcelId = parseInt(req.params.id, 10);
+  const cancelOrder = parcelData.find(parcel => parcel.id === parcelId);
+  if (cancelOrder.status === "delivered") {
+    res.status(403).send("sorry you cant cancel this order because it has already been delivered");
+  } else {
+    cancelOrder.status = 'cancelled';
+    fs.writeFile('parceldata.json', JSON.stringify(parcelData, null, 2), (err) => {
+      if (err) {
+        res.send(err);
+      }
+      res.send(cancelOrder);
+    })
+  }
+});
+
 export default app;
