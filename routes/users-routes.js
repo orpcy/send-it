@@ -1,6 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import { createUser} from '../controllers/users-controller.js';
+import { createUser, userLogin} from '../controllers/users-controller.js';
 import { check } from 'express-validator/check';
 
 const app = express();
@@ -16,5 +16,8 @@ app.post('/users', [
   check('password')
   .isLength({min: 5}).withMessage('minimum length of 5')
 ], createUser);
+
+//endpoint for logging in
+app.post('/users/login', userLogin);
 
 export default app;

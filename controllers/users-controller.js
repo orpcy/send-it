@@ -28,3 +28,22 @@ export const createUser = (req, res) => {
     });
   }
 }
+
+//request for logging in
+export const userLogin = (req, res) => {
+  const { email } = req.body;
+  client.query(`SELECT * FROM users WHERE email = $1`, [email], (err, user) => {
+    if (err) {
+      res.send(err);
+    } else if (user.rows.length) {
+      const token = tokenGenerator(user.rows[0]);
+      res.send({
+        message: "Login successful",
+        token,
+        expiresIn: '24hours'
+      });
+    } else {
+      res.send("User not found!");
+    }
+  });
+}
