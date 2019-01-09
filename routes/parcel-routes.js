@@ -1,6 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import { createParcel, getAllParcels} from '../controllers/parcels-controller.js';
+import { createParcel, getAllParcels, changeDestination, changeStatus, changePresentLocation } from '../controllers/parcels-controller.js';
 import { check } from 'express-validator/check';
 import { authorizeUser } from '../middlewares/middleware.js';
 
@@ -18,5 +18,14 @@ app.post('/parcels', authorizeUser, [
 
 //get all parcel orders
 app.get('/parcels', authorizeUser, getAllParcels);
+
+//change destination of an order
+app.patch('/parcels/destination', authorizeUser, changeDestination);
+
+//change status of an order
+app.patch('/parcels/status', authorizeUser, changeStatus);
+
+//change present location of an order
+app.patch('/parcels/presentLocation', authorizeUser, changePresentLocation);
 
 export default app;
