@@ -24,46 +24,10 @@
     "destination": "ikorodu",
     "recipientName": "gold",
     "recipientPhoneNo": "09065489324",
-    "status": "processing"
-  },
-  {
-    "id": 4,
-    "userId": 2,
-    "pickupLocation": "anthony",
-    "destination": "ikorodu",
-    "recipientName": "gold",
-    "recipientPhoneNo": "09065489324",
-    "status": "processing"
-  },
-  {
-    "id": 5,
-    "userId": 2,
-    "pickupLocation": "anthony",
-    "destination": "ikorodu",
-    "recipientName": "gold",
-    "recipientPhoneNo": "09065489324",
-    "status": "cancelled"
-  },
-  {
-    "id": 6,
-    "userId": 2,
-    "pickupLocation": "anthony",
-    "destination": "ikorodu",
-    "recipientName": "gold",
-    "recipientPhoneNo": "09065489324",
-    "status": "processing"
-  },
-  {
-    "id": 7,
-    "userId": 2,
-    "pickupLocation": "anthony",
-    "destination": "ikorodu",
-    "recipientName": "gold",
-    "recipientPhoneNo": "09065489324",
     "status": "delivered"
   },
   {
-    "id": 8,
+    "id": 4,
     "userId": 2,
     "pickupLocation": "anthony",
     "destination": "ikorodu",

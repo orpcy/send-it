@@ -98,7 +98,7 @@ describe('test to cancel a parcel delivery order', () => {
 
   it('should not cancel if status is delivered', done => {
     supertest(app)
-      .patch('/api/v1/parcels/7/cancel')
+      .patch('/api/v1/parcels/3/cancel')
       .end((err, res) => {
         expect(res.status).equal(403);
         expect(res.body.error).equal(undefined);
