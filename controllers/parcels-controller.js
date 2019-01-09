@@ -50,3 +50,67 @@ export const getAllParcels = (req, res) => {
     res.send("Please enter valid token");
   }
 }
+
+//request for changing destination for a parcel delivery. accessible only by the user that created that parcel
+export const changeDestination = (req, res) => {
+  const { destination, user_id } = req.body;
+
+  if(req.decoded.id === parseInt(user_id, 10)){
+    client.query('UPDATE parcels SET destination = $1 RETURNING *', [destination], (err, results) => {
+      if(err){
+        res.send(err);
+      }else {
+        res.send({
+          msg: "Destination changed successfully",
+          details: results.rows[0]
+        });
+      }
+    })
+  }else {
+    res.send("Sorry! You can't change the destination for another user's parcel");
+  }
+}
+
+//request for changing status. accessible by the admins only
+export const changeStatus = (req, res) => {
+  const {status, parcelId} = req.body;
+
+  if(req.decoded.role !== 'admin'){
+    res.send({
+      msg: 'failed! Only admins can access this endpoint'
+    });
+  }else {
+    client.query('UPDATE Parcels SET status = $1 WHERE id = $2 RETURNING *', [status, parcelId], (err, results) => {
+      if(err){
+        res.send(err);
+      }else{
+        res.send({
+          msg: 'status changed successfully',
+          details: results.rows[0]
+        });
+      }
+    });
+  }
+}
+
+//request for changing present location. accessible by admins only
+export const changePresentLocation = (req, res) => {
+  const {presentLocation, parcelId} = req.body;
+
+  if(req.decoded.role !== 'admin'){
+    res.send({
+      msg: 'failed! Only admins can access this endpoint'
+    });
+  }else {
+    client.query('UPDATE Parcels SET present_location = $1 WHERE id = $2 RETURNING *', [presentLocation, parcelId], (err, results) => {
+      if(err){
+        res.send(err);
+      }else{
+        res.send({
+          msg: 'present location changed successfully',
+          details: results.rows[0]
+        });
+      }
+    });
+  }
+}
