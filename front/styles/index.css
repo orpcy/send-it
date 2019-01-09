@@ -1,0 +1,140 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+header{
+  width: 100%;
+  padding: 6px 0;
+  position: fixed;
+  z-index: 10;
+  background-color: white;
+}
+
+.headSection{
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.headSection .logo{
+  float: left;
+}
+
+.headerNav{
+  float: right;
+}
+
+.headerNav ul li{
+  float: left;
+  margin: 0 20px;
+  margin-top: 18px;
+}
+
+.headerNav ul li a{
+  font-size: 21px;
+  color: black;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.banner{
+  background-image: url("../images/banner2.jpg");
+  background-position: bottom;
+  background-size: cover;
+  height: 800px;
+  position: relative;
+  top: 87px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+  width: 100%;
+}
+
+.banner div{
+  text-align: center;
+  width: 100%;
+}
+
+.banner div p{
+  color: white;
+  font-size: 35px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin-bottom: 18px;
+  font-weight: bold;
+}
+
+.banner div a{
+  color: white;
+  background-color: red;
+  padding: 15px 25px;
+  font-weight: bold;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;
+}
+
+.banner div a:hover{
+  background-color: rgb(240, 114, 114);
+}
+
+footer{
+  position: relative;
+  top: 87px;
+  background-color: lightgray;
+  margin: 0;
+  padding: 0;
+  border-top: 4px solid gray;
+  width: 100%;
+}
+
+.footerSection{
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  height: 180px;
+  border-bottom: 3px solid gray;
+}
+
+.footerSection ul li {
+  float: left;
+  width: 22%;
+  margin: 25px 1.5%;
+}
+
+.footerSection h2{
+  margin-bottom: 10px;
+  font-size: 26px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.footerSection a{
+  color: black;
+}
+
+.copyrights{
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.copyrights img{
+  height: 50px;
+}
