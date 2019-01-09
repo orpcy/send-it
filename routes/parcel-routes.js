@@ -1,6 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import { createParcel} from '../controllers/parcels-controller.js';
+import { createParcel, getAllParcels} from '../controllers/parcels-controller.js';
 import { check } from 'express-validator/check';
 import { authorizeUser } from '../middlewares/middleware.js';
 
@@ -15,5 +15,8 @@ app.post('/parcels', authorizeUser, [
   .isNumeric().withMessage('Enter numbers only')
   .isLength({ max: 11}).withMessage('Phone number cannot be more than 11 digits')
 ], createParcel);
+
+//get all parcel orders
+app.get('/parcels', authorizeUser, getAllParcels);
 
 export default app;
