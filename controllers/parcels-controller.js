@@ -23,3 +23,30 @@ export const createParcel = (req, res) => {
     res.status(401).send({ msg: 'Sorry you can not create Parcel Order for another User!' });
   }
 };
+
+//request for getting all parcel if admin or get all parcels by a specific user
+export const getAllParcels = (req, res) => {
+  const {userId} = req.body;
+  if (req.decoded.role !== 'admin' && req.decoded.role !== 'member') {
+    res.send("Sorry! Only admins and members have access to this endpoint")
+  } else if (req.decoded.role === 'admin') {
+    client.query('SELECT * from parcels ORDER By id ASC', (err, results) => {
+      if (err) {
+        res.send(err);
+      } else {
+        res.send(results.rows);
+      }
+    });
+  }else if(req.decoded.role === 'member' && req.decoded.id === parseInt(userId, 10)){
+    client.query('SELECT * FROM parcels WHERE user_id = $1', [userId], (err, results) => {
+      if(err){
+        res.send(err);
+      }else{
+        res.send(results.rows);
+      }
+    });
+  }
+  else {
+    res.send("Please enter valid token");
+  }
+}
