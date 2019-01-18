@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>User Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./styles/userProfile.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+      integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="headSection">
+        <a href="#" class="logo"><img src="./images/logo.png"/></a>
+        <nav class="headerNav">
+          <ul>
+            <li><a id="nameBar"></a></li>
+            <li><a href="./userProfile.html">Dashboard</a></li>
+            <li><button id="logout">Logout</button></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="banner">
+      <div id="dashboard">
+          <span><a href="./createOrder.html" class="orderLink">Create Order</a></span>
+        <nav>
+          <ul>
+            <li>Number of Orders: <span id="ordersLength">0</span></li>
+            <li>Orders in transit: <span id="transit">0</span></li>
+            <li>Delivered: <span id="delivered">0</span></li>
+            <li>Cancelled Orders: <span id="cancelled">0</span></li>
+          </ul>
+        </nav>
+        <table>
+          <thead>
+            <tr>
+              <th class="th1">Order ID</th>
+              <th>Pickup Location</th>
+              <th>Destination</th>
+              <th>Recipient Name</th>
+              <th>Recipient Phone Number</th>
+              <th class="thn">Status</th>
+            </tr>
+          </thead>
+          <tbody class="parcelDetails"></tbody>
+        </table>
+        <h1 id="error-msg"></h1>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footerSection">
+        <ul>
+          <li>
+            <h2>About us</h2>
+            <p>
+              SendIT is a parcel/courier service that delivers orders perfectly
+              with utmost speed
+            </p>
+          </li>
+          <li>
+            <h2>Office Address</h2>
+            <p>No 11, Araba street, Ilupeju estate, Lagos State Nigeria</p>
+          </li>
+          <li>
+            <h2>Working Hours</h2>
+            <p>Weekdays: 8am - 6pm</p>
+            <p>Weekends: 10am - 4pm</p>
+          </li>
+          <li>
+            <h2>MORE INFO</h2>
+            <p><a href="index.html">Careers</a></p>
+            <p><a href="index.html">Help Center</a></p>
+            <p><a href="index.html">Terms&Conditions</a></p>
+            <p><a href="index.html">Privacy Policy</a></p>
+          </li>
+        </ul>
+      </div>
+      <div class="copyrights">
+        <img src="images/footerlogo.png" />Copyright &copy; 2019. All rights
+        reserved!
+      </div>
+    </footer>
+  </body>
+  <script src="./scripts/userProfile.js"></script>
+</html>

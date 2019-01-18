@@ -79,8 +79,8 @@ form input.field{
   border-radius: 5px;
 }
 
-.submit{
-  width: 110px;
+.destinationButton{
+  width: 220px;
   height: 35px;
   color: white;
   background-color: red;
@@ -90,22 +90,8 @@ form input.field{
   cursor: pointer;
 }
 
-.submit:hover{
+.destinationButton:hover{
   background-color: rgb(247, 95, 95);
-}
-
-.form-section p{
-  margin-top: 15px;
-  font-size: 20px;
-  float: right;
-}
-
-#login{
-  color: white;
-  padding: 3px 15px;
-  background-color: red;
-  border-top-right-radius: 10px;
-  border-bottom-left-radius: 10px;
 }
 
 #error-msg{

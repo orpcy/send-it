@@ -4,11 +4,9 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Register</title>
+  <title>Login</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="./styles/register.css" />
-  <script src="//code.jquery.com/jquery.min.js"></script>
-  <script src="./scripts/index.js"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="./styles/cancelOrder.css" />
 </head>
 
 <body>
@@ -18,9 +16,8 @@
       <a href="#" class="logo"><img src="./images/logo.png" /></a>
       <nav class="headerNav">
         <ul>
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./register.html">Register</a></li>
-          <li><a href="./login.html">Login</a></li>
+          <li><a id="nameBar"></a></li>
+          <li><a href="./userProfile.html">Dashboard</a></li>
         </ul>
       </nav>
     </div>
@@ -28,22 +25,13 @@
 
   <section class="form-section">
     <div>
-      <form method="POST" id="registration-form" autocomplete="off">
-        <h2>REGISTER</h2>
-        <h3>Firstname *</h3>
-        <input type="text" id="firstname" autofocus class="field" required/><br>
-        <h3>Lastname:</h3>
-        <input type="text" id="lastname" class="field" /><br>
-        <h3>Email *</h3>
-        <input type="email" id="email" class="field" required/><br>
-        <h3>Mobile-no *</h3>
-        <input type="text" id="phone-no" class="field" required/><br>
-        <h3>Password *</h3>
-        <input type="password" id="password" class="field" required/><br>
-        <input type="submit" value="Submit" class="submit" />
+      <form method="PATCH" id="edit-form" autocomplete="off">
+        <h2>Cancel Parcel Order</h2>
+        <h3>Parcel ID:</h3>
+        <input type="number" id="parcelId" class="field" autofocus/><br>
+        <input type="submit" value="Cancel" class="destinationButton" />
         <h4 id="error-msg"></h4>
       </form>
-      <p>Already have an account? <a href="./login.html" id="login">Login</a></p>
     </div>
   </section>
 
@@ -79,6 +67,6 @@
 
 </body>
 
-<script src="./scripts/register.js"></script>
+<script src="./scripts/cancelOrder.js"></script>
 
 </html>

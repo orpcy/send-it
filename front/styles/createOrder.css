@@ -51,6 +51,12 @@ header{
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+#nameBar{
+  color: rgb(1, 60, 99);
+  font-weight: bold;
+}
+
+
 .form-section{
   width: 100%;
   position: relative;
@@ -94,20 +100,6 @@ form input.field{
   background-color: rgb(247, 95, 95);
 }
 
-.form-section p{
-  margin-top: 15px;
-  font-size: 20px;
-  float: right;
-}
-
-#login{
-  color: white;
-  padding: 3px 15px;
-  background-color: red;
-  border-top-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-}
-
 #error-msg{
   color: red;
   font-size: 20px;
@@ -116,11 +108,12 @@ form input.field{
 
 footer{
   position: relative;
-  top: 90px;
+  top: 91px;
   background-color: lightgray;
   margin: 0;
   padding: 0;
   border-top: 4px solid gray;
+  width: 100%;
 }
 
 .footerSection{
@@ -160,4 +153,3 @@ footer{
 .copyrights img{
   height: 50px;
 }
-
