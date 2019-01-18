@@ -46,3 +46,10 @@ const register = event => {
 }
 
 document.getElementById('registration-form').addEventListener('submit', register);
+
+//handling menu bar
+$(document).ready(() => {
+  $(".burger-nav").on("click", () => {
+    $("header nav ul").toggleClass("open");
+  });
+});

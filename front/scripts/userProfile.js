@@ -82,5 +82,9 @@ const renderTableData = (data, ordersTable) => {
   });
 };
 
-{/* <td><i class="fas fa-edit"></i></td>
-<td><button id="cancel"><i class="fas fa-trash-alt"></i></button></td> */}
+//handling menu bar
+$(document).ready(() => {
+  $(".burger-nav").on("click", () => {
+    $("header nav ul").toggleClass("open");
+  });
+});

@@ -50,3 +50,10 @@ const createOrder = event => {
 document
   .getElementById("registration-form")
   .addEventListener("submit", createOrder);
+
+  //handling menu bar
+$(document).ready(() => {
+  $(".burger-nav").on("click", () => {
+    $("header nav ul").toggleClass("open");
+  });
+});
