@@ -3,9 +3,10 @@ import routes from "./routes/index";
 import bodyParser from "body-parser";
 import { Client } from "pg";
 const connectionString =
-  "postgresql://postgres:a3La4Va2a5@127.0.0.1:5432/parcel";
+  "postgresql://postgres:password@127.0.0.1:5432/parcel";
 
 const app = express();
+
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
@@ -17,7 +18,9 @@ app.use(function(req, res, next) {
 });
 
 app.use(express.static(__dirname + "/front"));
+
 app.use(bodyParser.json());
+
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const client = new Client({
@@ -78,6 +81,7 @@ app.all("*", (req, res) => {
   res.send("endpoint does not exist!");
 });
 
+//running express on port 8080
 app.listen(8080, () => {
   console.log("running on port 8080");
 });
