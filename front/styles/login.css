@@ -79,7 +79,7 @@ form input.field{
   border-radius: 5px;
 }
 
-.submit{
+.loginButton{
   width: 110px;
   height: 35px;
   color: white;
@@ -90,7 +90,7 @@ form input.field{
   cursor: pointer;
 }
 
-.submit:hover{
+.loginButton:hover{
   background-color: rgb(247, 95, 95);
 }
 
@@ -106,6 +106,12 @@ form input.field{
   background-color: red;
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
+}
+
+#error-msg{
+  color: red;
+  font-size: 20px;
+  margin: 10px 0;
 }
 
 footer{

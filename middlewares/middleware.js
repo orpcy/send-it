@@ -9,8 +9,9 @@ export const tokenGenerator = user => {
     id: user.id,
     email: user.email,
     first_name: user.first_name,
+    password: user.password,
     role: user.role
-  }, SECRET_KEY, { expiresIn: '24h' });
+  }, SECRET_KEY, { expiresIn: '1h' });
 }
 
 //endpoint to decode token provided by the user and check if to authorize the request or not

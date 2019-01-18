@@ -7,7 +7,6 @@
   <title>Login</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="./styles/login.css" />
-  <script src="main.js"></script>
 </head>
 
 <body>
@@ -20,7 +19,6 @@
           <li><a href="./index.html">Home</a></li>
           <li><a href="./register.html">Register</a></li>
           <li><a href="./login.html">Login</a></li>
-          <li><a href="#">Admin</a></li>
         </ul>
       </nav>
     </div>
@@ -28,13 +26,14 @@
 
   <section class="form-section">
     <div>
-      <form>
+      <form method="POST" id="login-form" autocomplete="off">
         <h2>LOGIN</h2>
         <h3>Email:</h3>
-        <input type="email" name="email" class="field" /><br>
+        <input type="email" id="email" class="field" autofocus required/><br>
         <h3>Password:</h3>
-        <input type="password" name="password" class="field" /><br>
-        <input type="button" value="Login" class="submit" />
+        <input type="password" id="password" class="field" required/><br>
+        <input type="submit" value="Login" class="loginButton" />
+        <h4 id="error-msg"></h4>
       </form>
       <p>Don't have an account? <a href="./register.html" id="login">Sign Up</a></p>
     </div>
@@ -71,5 +70,7 @@
   </footer>
 
 </body>
+
+<script src="./scripts/login.js"></script>
 
 </html>

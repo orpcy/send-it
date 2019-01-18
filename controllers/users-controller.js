@@ -21,8 +21,10 @@ export const createUser = (req, res) => {
         console.log(user.rows[0]);
         res.status(201).send({
           success: true,
-          message: 'User added successfully!',
-          token: tokenGenerator(user.rows[0])
+          msg: 'User added successfully!',
+          userId: user.rows[0].id,
+          token: tokenGenerator(user.rows[0]),
+          expiresIn: '24hours'
         });
       }
     });
@@ -31,19 +33,39 @@ export const createUser = (req, res) => {
 
 //request for logging in
 export const userLogin = (req, res) => {
-  const { email } = req.body;
-  client.query(`SELECT * FROM users WHERE email = $1`, [email], (err, user) => {
+  const { email, password } = req.body;
+  client.query(`SELECT * FROM users WHERE email = $1 AND password = $2`, [email, password], (err, user) => {
     if (err) {
       res.send(err);
     } else if (user.rows.length) {
       const token = tokenGenerator(user.rows[0]);
       res.send({
-        message: "Login successful",
+        msg: "Login successful",
+        userId: user.rows[0].id,
         token,
         expiresIn: '24hours'
       });
     } else {
-      res.send("User not found!");
+      res.send({
+        success: false,
+        msg: "Incorrect email or password"
+      });
     }
   });
 }
+
+export const getUser = (req, res) => {
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    res.status(422).json({ errors: errors.array() });
+  } else {
+    client.query(`SELECT * FROM users WHERE id = ${req.decoded.id}`, (err, resp) => {
+        if (err) {
+          res.status(500).send(err);
+        } else {
+          console.log(resp.rows[0]);
+          res.status(200).send(resp.rows[0]);
+        }
+      });
+  }
+};
