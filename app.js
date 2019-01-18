@@ -3,7 +3,7 @@ import routes from "./routes/index";
 import bodyParser from "body-parser";
 import { Client } from "pg";
 const connectionString =
-  "postgresql://postgres:a3La4Va2a5@127.0.0.1:5432/parcel";
+  "postgresql://postgres:password@127.0.0.1:5432/parcel";
 
 const app = express();
 app.use(function(req, res, next) {
@@ -17,7 +17,9 @@ app.use(function(req, res, next) {
 });
 
 app.use(express.static(__dirname + "/front"));
+
 app.use(bodyParser.json());
+
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const client = new Client({
