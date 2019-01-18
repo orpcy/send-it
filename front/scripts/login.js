@@ -48,3 +48,10 @@ const login = event => {
 }
 
 document.getElementById('login-form').addEventListener('submit', login);
+
+//handling menu bar
+$(document).ready(() => {
+    $(".burger-nav").on("click", () => {
+      $("header nav ul").toggleClass("open");
+    });
+  });

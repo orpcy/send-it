@@ -49,3 +49,11 @@ const changeDestination = event => {
 document
   .getElementById("edit-form")
   .addEventListener("submit", changeDestination);
+
+
+//handling menu bar
+$(document).ready(() => {
+  $(".burger-nav").on("click", () => {
+    $("header nav ul").toggleClass("open");
+  });
+});

@@ -46,3 +46,10 @@ const cancelOrder = event => {
 };
 
 document.getElementById("edit-form").addEventListener("submit", cancelOrder);
+
+//handling menu bar
+$(document).ready(() => {
+  $(".burger-nav").on("click", () => {
+    $("header nav ul").toggleClass("open");
+  });
+});

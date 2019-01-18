@@ -144,6 +144,8 @@ th{
   text-transform: uppercase;
   background-color: #393939;
   font-weight: bold;
+  width: 15%;
+  margin: 0 0.8%;
 }
 
 td{
@@ -154,6 +156,8 @@ td{
   line-height: 1.4;
   background-color: #222222;
   text-transform: capitalize;
+  width: 15%;
+  margin: 0 0.8%;
 }
 
 .th1{
@@ -165,7 +169,6 @@ td{
 }
 
 .destinationh2{
-  text-align: right;
   margin: 20px 0;
 }
 
@@ -183,6 +186,13 @@ td{
 
 #changeDestination:hover{
   background-color: #575656;
+}
+
+.cancel{
+  padding: 2px;
+  border: 2px solid rgb(160, 21, 21);
+  cursor: pointer;
+  background-color: red;
 }
 
 footer{
@@ -233,9 +243,132 @@ footer{
   height: 50px;
 }
 
-.cancel{
-  padding: 2px;
-  border: 2px solid rgb(160, 21, 21);
-  cursor: pointer;
-  background-color: red;
+
+/* TABLETS */
+@media screen and (max-width: 705px) {
+  /* head section */
+  header {
+    padding: 6px 0;
+    position: unset;
+  }
+
+  .headSection {
+    text-align: unset;
+  }
+
+  .headSection .logo {
+    float: none;
+  }
+
+  .headerNav {
+    float: none;
+    display: flex;
+    justify-content: center;
+  }
+
+  .headerNav ul li {
+    display: inline;
+    margin: 10px 25px;
+  }
+
+  /* body section */
+  table{
+    text-align: center;
+    min-width: 670px;
+    overflow: scroll;
+  }
+  
+  .banner{
+    position: unset;
+    top: 0;
+    text-align: unset;
+  }
+
+  /* footer section */
+  footer {
+    position: unset;
+    top: 0px;
+  }
+
+  .footerSection {
+    height: 310px;
+  }
+
+  .footerSection ul li {
+    width: 40%;
+    margin: 15px 5% 0 5%;
+    height: 120px;
+  }
+}
+
+/* SMARTPHONES */
+
+@media screen and (max-width: 465px) {
+  /* head section */
+  .burger-nav {
+    height: 40px;
+    display: block;
+    width: 100%;
+    background: url("../images/menu.jpg") no-repeat right center;
+    background-color: inherit;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+  }
+
+  .headerNav ul.open {
+    height: auto;
+  }
+
+  .headerNav ul{
+    height: 0;
+    overflow: hidden;
+  }
+
+  header {
+    padding: 6px 0 0 0;
+    position: unset;
+  }
+
+  .headSection {
+    text-align: center;
+  }
+
+  .headSection .logo {
+    float: none;
+  }
+
+  .headerNav {
+    float: none;
+    display: unset;
+    justify-content: unset;
+  }
+
+  .headerNav ul li {
+    display: unset;
+    margin: 0;
+    padding: 8px 0;
+    width: 100%;
+    text-align: left;
+    background-color: rgb(235, 231, 231);
+    border: 1px solid rgb(151, 66, 66);
+  }
+
+  /* body section */
+  .form-section {
+    height: 600px;
+  }
+  /* footer section */
+
+  .footerSection {
+    height: 400px;
+    text-align: center;
+  }
+
+  .footerSection ul li {
+    float: none;
+    width: 80%;
+    margin: 10px auto;
+    height: 80px;
+  }
 }
