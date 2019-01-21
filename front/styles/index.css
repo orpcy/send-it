@@ -214,7 +214,7 @@ footer {
     height: auto;
   }
 
-  .headerNav ul{
+  .headerNav ul {
     height: 0;
     overflow: hidden;
   }
@@ -265,14 +265,30 @@ footer {
   /* footer section */
 
   .footerSection {
-    height: 400px;
+    height: 520px;
     text-align: center;
   }
 
   .footerSection ul li {
     float: none;
     width: 80%;
-    margin: 10px auto;
-    height: 80px;
+    margin: 15px auto;
+    height: 100px;
+  }
+}
+
+/* very small devices */
+@media screen and (max-width: 280px) {
+  /* footer section */
+
+  .footerSection {
+    height: 580px;
+  }
+
+  .footerSection ul li {
+    float: none;
+    width: 80%;
+    margin: 17.5px auto;
+    height: 110px;
   }
 }

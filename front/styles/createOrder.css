@@ -1,23 +1,23 @@
-*{
+* {
   padding: 0;
   margin: 0;
 }
 
-body{
+body {
   width: 100%;
   margin: 0;
   padding: 0;
 }
 
-li{
+li {
   list-style: none;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
-header{
+header {
   width: 100%;
   padding: 6px 0;
   position: fixed;
@@ -25,39 +25,39 @@ header{
   background-color: white;
 }
 
-.headSection{
+.headSection {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
 }
 
-.headSection .logo{
+.headSection .logo {
   float: left;
 }
 
-.headerNav{
+.headerNav {
   float: right;
 }
 
-.headerNav ul li{
+.headerNav ul li {
   float: left;
   margin: 0 20px;
   margin-top: 18px;
 }
 
-.headerNav ul li a{
+.headerNav ul li a {
   font-size: 21px;
   color: black;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-#nameBar{
+#nameBar {
   color: rgb(1, 60, 99);
   font-weight: bold;
 }
 
-
-.form-section{
+.form-section {
   width: 100%;
   position: relative;
   top: 90px;
@@ -68,45 +68,45 @@ header{
   justify-content: center;
 }
 
-.form-section div{
+.form-section div {
   max-width: 550px;
   width: 100%;
   margin: 0 auto;
 }
 
-form h2{
+form h2 {
   margin-bottom: 15px;
 }
 
-form input.field{
+form input.field {
   width: 100%;
   margin: 10px 0;
   height: 35px;
   border-radius: 5px;
 }
 
-.submit{
+.submit {
   width: 110px;
   height: 35px;
   color: white;
   background-color: red;
   font-size: 25px;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   border-top-right-radius: 15px;
   cursor: pointer;
 }
 
-.submit:hover{
+.submit:hover {
   background-color: rgb(247, 95, 95);
 }
 
-#error-msg{
+#error-msg {
   color: red;
   font-size: 20px;
   margin: 10px 0;
 }
 
-footer{
+footer {
   position: relative;
   top: 91px;
   background-color: lightgray;
@@ -116,7 +116,7 @@ footer{
   width: 100%;
 }
 
-.footerSection{
+.footerSection {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
@@ -130,17 +130,17 @@ footer{
   margin: 25px 1.5%;
 }
 
-.footerSection h2{
+.footerSection h2 {
   margin-bottom: 10px;
   font-size: 26px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.footerSection a{
+.footerSection a {
   color: black;
 }
 
-.copyrights{
+.copyrights {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
@@ -150,7 +150,7 @@ footer{
   padding: 10px 0;
 }
 
-.copyrights img{
+.copyrights img {
   height: 50px;
 }
 
@@ -187,7 +187,7 @@ footer{
     top: 0;
   }
 
-  .form-section div{
+  .form-section div {
     width: 80%;
   }
 
@@ -227,7 +227,7 @@ footer{
     height: auto;
   }
 
-  .headerNav ul{
+  .headerNav ul {
     height: 0;
     overflow: hidden;
   }
@@ -269,14 +269,30 @@ footer{
   /* footer section */
 
   .footerSection {
-    height: 400px;
+    height: 520px;
     text-align: center;
   }
 
   .footerSection ul li {
     float: none;
     width: 80%;
-    margin: 10px auto;
-    height: 80px;
+    margin: 15px auto;
+    height: 100px;
+  }
+}
+
+/* very small devices */
+@media screen and (max-width: 280px) {
+  /* footer section */
+
+  .footerSection {
+    height: 580px;
+  }
+
+  .footerSection ul li {
+    float: none;
+    width: 80%;
+    margin: 17.5px auto;
+    height: 110px;
   }
 }
