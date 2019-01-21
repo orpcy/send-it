@@ -89,9 +89,11 @@ app.all("*", (req, res) => {
   res.send("endpoint does not exist!");
 });
 
-//running express on port 8080
-app.listen(8080, () => {
-  console.log("running on port 8080");
+const PORT = process.env.PORT || 8080;
+
+//running process on the available port
+app.listen(PORT, () => {
+  console.log(`running on port ${PORT}`);
 });
 
 //for unit testing
