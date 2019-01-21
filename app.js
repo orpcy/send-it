@@ -6,13 +6,6 @@ import { Client } from "pg";
 
 dotenv.config();
 
-let connectionString;
-if (process.env.NODE_ENV === 'development') {
-  connectionString = "postgresql://postgres:password@127.0.0.1:5432/parcel";
-} else {
-  connectionString = "postgres://vzkkbzfujmetix:81b6a9cb92e422df59a58e0a5a8310ea2cff93c5fd87e2cbcd40e06e48d9268f@ec2-107-22-162-8.compute-1.amazonaws.com:5432/dakipp09hgo27e";
-}
-
 const app = express();
 
 app.use(function(req, res, next) {
@@ -32,7 +25,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const client = new Client({
-  connectionString: connectionString
+  connectionString: process.env.DATABASE_URL
 });
 
 global.client = client;
