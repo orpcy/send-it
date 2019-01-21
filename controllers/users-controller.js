@@ -25,7 +25,7 @@ export const createUser = (req, res) => {
         } else {
           tokenGenerator(user.rows[0], (err, token) => {
             if (err) {
-              res.send(err);
+              res.send({ msg: "Unable to encode token" });
             } else {
               res.status(201).send({
                 success: true,
@@ -54,7 +54,7 @@ export const userLogin = (req, res) => {
       } else if (user.rows.length) {
         tokenGenerator(user.rows[0], (err, token) => {
           if (err) {
-            res.send({ msg: "Unable to decode login token" });
+            res.send({ msg: "Unable to encode token" });
           } else {
             res.send({
               msg: "Login successful",
