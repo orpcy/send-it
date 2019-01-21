@@ -1,9 +1,17 @@
+import dotenv from 'dotenv';
 import express from "express";
-import routes from "./routes/index";
+import routes from "./routes";
 import bodyParser from "body-parser";
 import { Client } from "pg";
-const connectionString =
-  "postgresql://postgres:password@127.0.0.1:5432/parcel";
+
+dotenv.config();
+
+let connectionString;
+if (process.env.NODE_ENV === 'development') {
+  connectionString = "postgresql://postgres:password@127.0.0.1:5432/parcel";
+} else {
+  connectionString = "postgres://vzkkbzfujmetix:81b6a9cb92e422df59a58e0a5a8310ea2cff93c5fd87e2cbcd40e06e48d9268f@ec2-107-22-162-8.compute-1.amazonaws.com:5432/dakipp09hgo27e";
+}
 
 const app = express();
 
