@@ -17,6 +17,12 @@
       integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
   </head>
 
   <body>
@@ -36,7 +42,9 @@
 
     <section class="banner">
       <div id="dashboard">
-          <span><a href="./createOrder.html" class="orderLink">Create Order</a></span>
+        <span
+          ><a href="./createOrder.html" id="orderLink">Create Order</a></span
+        >
         <nav>
           <ul>
             <li>Number of Orders: <span id="ordersLength">0</span></li>
@@ -45,15 +53,15 @@
             <li>Cancelled Orders: <span id="cancelled">0</span></li>
           </ul>
         </nav>
-        <table>
-          <thead>
+        <table class="table table-striped">
+          <thead class="thead-dark">
             <tr>
-              <th class="th1">Order ID</th>
-              <th>Pickup Location</th>
-              <th>Destination</th>
-              <th>Recipient Name</th>
-              <th>Recipient Phone Number</th>
-              <th class="thn">Status</th>
+              <th scope="col">ID</th>
+              <th scope="col">Pickup Location</th>
+              <th scope="col">Destination</th>
+              <th scope="col">Recipient Name</th>
+              <th scope="col">Recipient Phone Number</th>
+              <th scope="col">Status</th>
             </tr>
           </thead>
           <tbody class="parcelDetails"></tbody>
@@ -66,27 +74,27 @@
       <div class="footerSection">
         <ul>
           <li>
-            <h2>About us</h2>
-            <p>
+            <h2 id="footHeading">About us</h2>
+            <p id="footerPara1">
               SendIT is a parcel/courier service that delivers orders perfectly
               with utmost speed
             </p>
           </li>
           <li>
-            <h2>Office Address</h2>
-            <p>No 11, Araba street, Ilupeju estate, Lagos State Nigeria</p>
+            <h2 id="footHeading">Office Address</h2>
+            <p id="footerPara1">No 11, Araba street, Ilupeju estate, Lagos State Nigeria</p>
           </li>
           <li>
-            <h2>Working Hours</h2>
-            <p>Weekdays: 8am - 6pm</p>
-            <p>Weekends: 10am - 4pm</p>
+            <h2 id="footHeading">Working Hours</h2>
+            <p id="footerPara2">Weekdays: 8am - 6pm</p>
+            <p id="footerPara2">Weekends: 10am - 4pm</p>
           </li>
           <li>
-            <h2>MORE INFO</h2>
-            <p><a href="index.html">Careers</a></p>
-            <p><a href="index.html">Help Center</a></p>
-            <p><a href="index.html">Terms&Conditions</a></p>
-            <p><a href="index.html">Privacy Policy</a></p>
+            <h2 id="footHeading">MORE INFO</h2>
+            <p id="footerPara2"><a href="index.html" id="moreInfo">Careers</a></p>
+            <p id="footerPara2"><a href="index.html" id="moreInfo">Help Center</a></p>
+            <p id="footerPara2"><a href="index.html" id="moreInfo">Terms&Conditions</a></p>
+            <p id="footerPara2"><a href="index.html" id="moreInfo">Privacy Policy</a></p>
           </li>
         </ul>
       </div>

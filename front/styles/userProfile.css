@@ -76,13 +76,12 @@ header {
 
 .banner {
   background-color: rgb(235, 232, 232);
-  height: 700px;
   position: relative;
   top: 91px;
   width: 100%;
   text-align: center;
+  padding: 140px 0;
   overflow: scroll;
-  padding: 40px 0;
 }
 
 #dashboard {
@@ -91,7 +90,7 @@ header {
   margin: 0 auto;
 }
 
-.orderLink {
+#orderLink {
   color: #cccaca;
   font-size: 22px;
   padding: 8px 14px;
@@ -99,6 +98,7 @@ header {
   background-color: #393939;
   border-bottom: 3px solid gray;
   border-right: 3px solid gray;
+  text-decoration: none;
 }
 
 .orderLink:hover {
@@ -125,48 +125,17 @@ header {
   font-family: tahoma;
 }
 
-table {
-  width: 100%;
-  margin: 20px 0;
-  border-collapse: collapse;
+table{
+  margin-top: 30px;
 }
 
-tr {
-  width: 100%;
-}
-
-th {
-  padding: 18px 0;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  font-size: 15px;
-  color: #82ad98;
-  line-height: 1.4;
-  text-transform: uppercase;
-  background-color: #393939;
-  font-weight: bold;
-  width: 15%;
-  margin: 0 0.8%;
-}
-
-td {
+#error-msg{
   font-size: 18px;
-  font-weight: 430;
-  padding: 18px 0;
-  color: #808080;
-  line-height: 1.4;
-  background-color: #222222;
-  text-transform: capitalize;
-  width: 15%;
-  margin: 0 0.8%;
-}
-
-.th1 {
-  border-top-left-radius: 10px;
-}
-
-.thn {
-  border-top-right-radius: 10px;
+  color: rgb(54, 54, 54);
+  width: 100%;
+  padding: 10px 0;
+  font-weight: 600;
+  color: red;
 }
 
 .destinationh2 {
@@ -184,6 +153,7 @@ td {
   font-weight: normal;
   border-bottom: 3px solid gray;
   border-right: 3px solid gray;
+  text-decoration: none;
 }
 
 #changeDestination:hover {
@@ -221,14 +191,26 @@ footer {
   margin: 25px 1.5%;
 }
 
-.footerSection h2 {
+#footHeading{
   margin-bottom: 10px;
   font-size: 26px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
 }
 
-.footerSection a {
+#moreInfo {
   color: black;
+  text-decoration: none;
+}
+
+#footerPara1{
+  font-family: 'Times New Roman', Times, serif;
+  line-height: 18px;
+}
+
+#footerPara2{
+  font-family: 'Times New Roman', Times, serif;
+  line-height: 1px;
 }
 
 .copyrights {
@@ -273,12 +255,6 @@ footer {
   }
 
   /* body section */
-  table {
-    text-align: center;
-    min-width: 670px;
-    overflow: scroll;
-  }
-
   .banner {
     position: unset;
     top: 0;
