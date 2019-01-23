@@ -282,17 +282,11 @@ footer {
 }
 
 /* very small devices */
-@media screen and (max-width: 280px) {
+@media screen and (max-width: 290px) {
   /* footer section */
 
-  .footerSection {
-    height: 580px;
-  }
+body{
+  min-width: 290px;
+}
 
-  .footerSection ul li {
-    float: none;
-    width: 80%;
-    margin: 17.5px auto;
-    height: 110px;
-  }
 }
