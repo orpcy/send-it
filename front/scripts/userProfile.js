@@ -71,7 +71,7 @@ fetch(`/api/v1/users/${userId}/parcels`, {
 const renderTableData = (data, ordersTable) => {
   data.forEach(parcel => {
     let parcelRow = document.createElement("tr");
-    parcelRow.innerHTML = `<td>${parcel.id}</td>
+    parcelRow.innerHTML = `<th scope="row">${parcel.id}</th>
                           <td>${parcel.pickup_location}</td>
                           <td class="remove-second">${parcel.destination}</td>
                           <td>${parcel.recipient_name}</td>
