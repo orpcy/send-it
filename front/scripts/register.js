@@ -15,8 +15,6 @@ const register = event => {
     })
   }).then(res => res.json())
     .then(res => {
-      const error = document.querySelector('#error-msg');
-      error.innerHTML = '';
       if (res.token) {
         fetch('/api/v1/me', {
           headers: {
@@ -34,12 +32,10 @@ const register = event => {
           })
           .catch(err => console.log('err occured', err));
       } else if (res.msg) {
-        error.innerHTML = res.msg;
+        toastr.error(res.msg);
       } else {
         res.errors.forEach(err => {
-          const errorElement = document.createElement('div');
-          errorElement.innerHTML = `${err.param}: ${err.msg}`;
-          error.appendChild(errorElement);
+          toastr.error(`${err.param}: ${err.msg}`);
         });
       }
     }).catch(err => console.log('err occured', err));
