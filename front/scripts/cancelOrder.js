@@ -27,19 +27,11 @@ const cancelOrder = event => {
     .then(res => res.json())
     .then(res => {
       console.log(res);
-      const errorDiv = document.querySelector("#error-msg");
-      errorDiv.innerHTML = "";
       if (res.details) {
         alert("Parcel Order cancelled successfully");
         window.location.href = "./userProfile.html";
       } else if (res.msg) {
-        errorDiv.innerHTML = res.msg;
-      } else {
-        res.errors.forEach(err => {
-          const errorElement = document.createElement("div");
-          errorElement.innerHTML = `${err.param} ${err.msg}`;
-          errorDiv.appendChild(errorElement);
-        });
+        toastr.error(res.msg);
       }
     })
     .catch(err => console.log("error occured", err));

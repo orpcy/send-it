@@ -14,8 +14,6 @@ const login = event => {
   }).then(res => res.json())
     .then(res => {
       console.log(res);
-      const error = document.querySelector('#error-msg');
-      error.innerHTML = ''
       if (res.token) {
         fetch('/api/v1/me', {
             headers:{
@@ -31,18 +29,12 @@ const login = event => {
                 window.location.href = "./userProfile.html";
                 alert("logged in successfully!");
             } else {
-                document.querySelector('#error-msg').innerHTML = 'Sorry, only a MEMBER can log in to this page';
+                toastr.error('Sorry, only a MEMBER can log in to this page');
             }
         })
         .catch(err => console.log('err occured', err));
     } else if (res.msg) {
-        error.innerHTML = res.msg;
-    } else {
-        res.errors.forEach(err => {
-            const errorElement = document.createElement('div');
-            errorElement.innerHTML = `${err.param} ${err.msg}`;
-            error.appendChild(errorElement);
-        });
+        toastr.error(res.msg)
     }
 }).catch(err => console.log('err occured', err));
 }

@@ -11,7 +11,7 @@
       media="screen"
       href="./styles/createOrder.css"
     />
-    <script src=""></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet"/>
   </head>
 
   <body>
@@ -32,16 +32,15 @@
       <div>
         <form method="POST" id="registration-form" autocomplete="off">
           <h2>CREATE ORDER</h2>
-          <h3>Pickup Location:</h3>
-          <input type="text" id="pickup" class="field" autofocus/><br />
-          <h3>Destination:</h3>
-          <input type="text" id="destination" class="field" /><br />
-          <h3>Recipient Name:</h3>
-          <input type="text" id="reciName" class="field" /><br />
-          <h3>Recipient Mobile Number:</h3>
+          <h3>Pickup Location *</h3>
+          <input type="text" id="pickup" class="field" autofocus required/><br />
+          <h3>Destination *</h3>
+          <input type="text" id="destination" class="field" required/><br />
+          <h3>Recipient Name *</h3>
+          <input type="text" id="reciName" class="field" required/><br />
+          <h3>Recipient Mobile Number *</h3>
           <input type="text" id="reciNum" class="field" /><br>
           <input type="submit" value="Create" class="submit" />
-          <h4 id="error-msg"></h4>
         </form>
       </div>
     </section>
@@ -82,4 +81,5 @@
   </body>
   <script src="//code.jquery.com/jquery.min.js"></script>
   <script src="./scripts/createOrder.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
 </html>

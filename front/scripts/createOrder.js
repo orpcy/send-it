@@ -29,18 +29,14 @@ const createOrder = event => {
     .then(res => res.json())
     .then(res => {
       console.log(res)
-      const errorDiv = document.querySelector("#error-msg");
-      errorDiv.innerHTML = "";
       if (res.id) {
         alert("parcel created successfully!");
         window.location.href = "./userProfile.html";
       } else if (res.msg) {
-        errorDiv.innerHTML = res.msg;
+        toastr.error(res.msg);
       } else {
         res.errors.forEach(err => {
-          const errorElement = document.createElement("div");
-          errorElement.innerHTML = `${err.param} ${err.msg}`;
-          errorDiv.appendChild(errorElement);
+          toastr.error(err.msg);
         });
       }
     })

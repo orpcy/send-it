@@ -97,7 +97,7 @@ export const cancelParcel = (req, res) => {
       }
     })
   }else {
-    res.send("Sorry! You cant cancel parcel for another user");
+    res.send("Sorry! You can't cancel parcel for another user");
   }
 }
 
