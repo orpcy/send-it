@@ -9,7 +9,7 @@ const app = express();
 app.use(bodyParser.json());
 
 //create a new parcel order.
-app.post('/parcels', [ check('recipient_phone_no', 'Mobile number must be valid').isMobilePhone() ], authorizeUser, createParcel);
+app.post('/parcels', [ check('recipient_phone_no', 'Please enter a valid mobile Number').isMobilePhone() ], authorizeUser, createParcel);
 
 //get all parcel orders by a specific user
 app.get('/users/:userId/parcels', authorizeUser, getAllParcels);

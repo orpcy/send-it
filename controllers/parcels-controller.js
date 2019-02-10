@@ -66,7 +66,7 @@ export const getAllParcels = (req, res) => {
         if (err) {
           res.send(err);
         } else if (!resp.rows.length) {
-          res.status(404).send({ msg: 'No Parcel Delivery Orders found for this User' });
+          res.status(404).send({ msg: 'You do not have any parcel order yet' });
         } else {
           res.send(resp.rows);
         }
@@ -91,6 +91,7 @@ export const cancelParcel = (req, res) => {
         })
       }else {
         res.send({
+          success: true,
           msg: "parcel cancelled successfully",
           details: results.rows[0]
         });
@@ -115,6 +116,7 @@ export const changeDestination = (req, res) => {
         })
       }else{
         res.send({
+          success: true,
           msg: "Destination changed successfully",
           details: results.rows[0]
         });

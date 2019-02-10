@@ -29,10 +29,10 @@ export const createUser = (req, res) => {
             } else {
               res.status(201).send({
                 success: true,
-                msg: "User added successfully!",
+                msg: "Registered successfully!",
                 userId: user.rows[0].id,
                 token,
-                expiresIn: "24hours"
+                expiresIn: "1hour"
               });
             }
           });

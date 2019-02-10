@@ -10,11 +10,11 @@ app.use(bodyParser.json());
 
 //endpoint  to create User acct
 app.post('/users', [
-  check('first_name').isAlpha().withMessage('must be alphabets only').isLength({min: 3, max: 20}).withMessage('must be of 3 characters and above'),
-  check('email', 'must be a valid email').isEmail(),
-  check('phone_no', 'must be a valid mobile number').isMobilePhone(),
+  check('first_name').isAlpha().withMessage('First name must be alphabets only').isLength({min: 3, max: 20}).withMessage('First name be of 3 characters and above'),
+  check('email', 'email must be valid').isEmail(),
+  check('phone_no', 'Mobile number must be valid').isMobilePhone(),
   check('password')
-  .isLength({min: 5}).withMessage('minimum length of 5')
+  .isLength({min: 5}).withMessage('Password must have a minimum length of 5')
 ], createUser);
 
 //endpoint for logging in
