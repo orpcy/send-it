@@ -18,7 +18,7 @@ class Register extends Component {
     event.preventDefault();
 
     const { firstname, lastname, email, mobile, password } = this.state.account;
-    fetch("http://localhost:8080/api/v1/users", {
+    fetch(`${process.env.REACT_APP_API_URL}/api/v1/users`, {
       method: "POST",
       headers: {
         "Content-type": "application/json"
