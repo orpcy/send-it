@@ -62,6 +62,7 @@ class Login extends Component {
             id="email"
             aria-describedby="emailHelp"
             placeholder="Enter email"
+            required
           />
           <small id="emailHelp" className="form-text text-muted">
             Enter a valid email address
@@ -77,6 +78,7 @@ class Login extends Component {
             className="form-control"
             id="password"
             placeholder="Password"
+            required
           />
         </div>
         <button type="submit" className="btn btn-primary">
