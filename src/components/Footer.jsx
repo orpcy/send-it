@@ -26,7 +26,7 @@ const Footer = () => {
             <ul className="list-unstyled text-small">
               <li>
                 <Link className="text-light" to="#">
-                  No 11, Araba street, Ilupeju estate, Lagos State Nigeria
+                  Lekki phase 1, Lagos State Nigeria
                 </Link>
               </li>
             </ul>
