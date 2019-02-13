@@ -1,0 +1,79 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="./styles/login.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet"/>
+
+</head>
+
+<body>
+
+  <header>
+    <div class="headSection">
+      <a href="#" class="logo"><img src="./images/logo.png" /></a>
+      <nav class="headerNav">
+          <a class="burger-nav"></a>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./register.html">Register</a></li>
+          <li><a href="./login.html">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="form-section">
+    <div>
+      <form method="POST" id="login-form" >
+        <h2>LOGIN</h2>
+        <h3>Email:</h3>
+        <input type="email" id="email" class="field" autofocus required/><br>
+        <h3>Password:</h3>
+        <input type="password" id="password" class="field" required/><br>
+        <input type="submit" value="Login" class="loginButton" />
+      </form>
+      <p>Don't have an account? <a href="./register.html" id="login">Register</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footerSection">
+      <ul>
+        <li>
+          <h2>About us</h2>
+          <p> SendIT is a parcel/courier service that delivers orders perfectly with utmost speed</p>
+        </li>
+        <li>
+          <h2>Office Address</h2>
+          <p>No 11, Araba street, Ilupeju estate, Lagos State Nigeria</p>
+        </li>
+        <li>
+          <h2>Working Hours</h2>
+          <p>Weekdays: 8am - 6pm</p>
+          <p>Weekends: 10am - 4pm</p>
+        </li>
+        <li>
+          <h2>MORE INFO</h2>
+          <p><a href="index.html">Careers</a></p>
+          <p><a href="index.html">Help Center</a></p>
+          <p><a href="index.html">Terms&Conditions</a></p>
+          <p><a href="index.html">Privacy Policy</a></p>
+        </li>
+      </ul>
+    </div>
+    <div class="copyrights">
+      <img src="images/footerlogo.png" />Copyright &copy; 2019. All rights reserved!
+    </div>
+  </footer>
+
+</body>
+<script src="//code.jquery.com/jquery.min.js"></script>
+<script src="./scripts/login.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
+
+</html>
