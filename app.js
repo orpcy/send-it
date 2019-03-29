@@ -80,7 +80,7 @@ app.all("*", (req, res) => {
   res.send("endpoint does not exist!");
 });
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 6001;
 
 //running process on the available port
 app.listen(PORT, () => {
