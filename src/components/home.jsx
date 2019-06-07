@@ -24,7 +24,7 @@ const Home = () => {
             src="images/slide2.jpg"
             alt="First slide"
           />
-          <div className="carousel-caption d-none d-md-block">
+          <div className="carousel-caption d-md-block">
             <h1 className="font-weight-bold">
               Building a stressless World through Speedy and Perfect Delivery..
             </h1>
@@ -44,7 +44,7 @@ const Home = () => {
             src="images/slide1.jpg"
             alt="Second slide"
           />
-          <div className="carousel-caption d-none d-md-block">
+          <div className="carousel-caption d-md-block">
             <h1 className="font-weight-bold">
               Building a stressless World through Speedy and Perfect Delivery..
             </h1>
@@ -64,7 +64,7 @@ const Home = () => {
             src="images/slide3.jpg"
             alt="Third slide"
           />
-          <div className="carousel-caption d-none d-md-block">
+          <div className="carousel-caption d-md-block">
             <h1 className="font-weight-bold">
               Building a stressless World through Speedy and Perfect Delivery..
             </h1>

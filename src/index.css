@@ -22,6 +22,7 @@ code {
 
 .carousel-item img {
   opacity: 0.8;
+  height: 80vh;
 }
 
 .registrationForm {
@@ -73,4 +74,67 @@ table {
 .errorPage {
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABZ0RVh0Q3JlYXRpb24gVGltZQAxMC8yOS8xMiKqq3kAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzVxteM2AAABHklEQVRIib2Vyw6EIAxFW5idr///Qx9sfG3pLEyJ3tAwi5EmBqRo7vHawiEEERHS6x7MTMxMVv6+z3tPMUYSkfTM/R0fEaG2bbMv+Gc4nZzn+dN4HAcREa3r+hi3bcuu68jLskhVIlW073tWaYlQ9+F9IpqmSfq+fwskhdO/AwmUTJXrOuaRQNeRkOd5lq7rXmS5InmERKoER/QMvUAPlZDHcZRhGN4CSeGY+aHMqgcks5RrHv/eeh455x5KrMq2yHQdibDO6ncG/KZWL7M8xDyS1/MIO0NJqdULLS81X6/X6aR0nqBSJcPeZnlZrzN477NKURn2Nus8sjzmEII0TfMiyxUuxphVWjpJkbx0btUnshRihVv70Bv8ItXq6Asoi/ZiCbU6YgAAAABJRU5ErkJggg==);
   padding: 13% 0;
+}
+
+@media screen and (max-width: 1240px){
+  .carousel-item img{
+    height: 70vh;
+  }
+}
+@media screen and (max-width: 950px){
+  .carousel-item img{
+    height: 65vh;
+  }
+}
+@media screen and (max-width: 767px){
+  .carousel-item img{
+    height: 50vh;
+  }
+
+  .carousel-caption {
+    top: 30%;
+    bottom: auto;
+  }
+}
+@media screen and (max-width: 550px){
+  .carousel-item img{
+    height: 45vh;
+  }
+
+  .carousel-caption {
+    top: 25%;
+    bottom: auto;
+  }
+
+  .carousel-caption h1{
+    font-size: 35px;
+  }
+}
+@media screen and (max-width: 430px){
+  .carousel-item img{
+    height: 42vh;
+  }
+
+  .carousel-caption {
+    top: 10%;
+    bottom: auto;
+  }
+
+  .carousel-caption h1{
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 375px){
+  .carousel-item img{
+    height: 38vh;
+  }
+
+  .carousel-caption {
+    top: 10%;
+    bottom: auto;
+  }
+
+  .carousel-caption h1{
+    font-size: 25px;
+  }
 }
