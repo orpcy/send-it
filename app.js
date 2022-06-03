@@ -3,27 +3,20 @@ import express from "express";
 import routes from "./routes";
 import bodyParser from "body-parser";
 import { Client } from "pg";
+import cors from "cors";
 
 dotenv.config();
 
 const app = express();
 
-app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Methods", "GET,PUT,PATCH,POST,DELETE");
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept, Authorization"
-  );
-  next();
-});
+app.use(cors());
 
 app.use(bodyParser.json());
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const client = new Client({
-  connectionString: process.env.DATABASE_URL
+  connectionString: process.env.DATABASE_URL,
 });
 
 global.client = client;
@@ -70,7 +63,7 @@ client
       }
     );
   })
-  .catch(err => {
+  .catch((err) => {
     console.log("error connecting to Database", err);
   });
 
